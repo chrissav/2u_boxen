@@ -89,5 +89,5 @@ node default {
     target => $boxen::config::repodir
   }
 
-  package { 'firefox': provider => 'brewcask' }
+  include techops
 }
