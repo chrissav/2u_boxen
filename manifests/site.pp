@@ -88,4 +88,6 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
+
+  package { 'firefox': provider => 'brewcask' }
 }
