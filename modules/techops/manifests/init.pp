@@ -1,13 +1,13 @@
 class techops {
   
-  include brewcask
+  include spf13vim3
   
-  file { '/tmp/hello2':
-      #owner   => 'root',
-      #group   => 'root',
-      mode    => '0666',
-      content => "world\n",
-  }
+  # file { '/tmp/hello2':
+  #     #owner   => 'root',
+  #     #group   => 'root',
+  #     mode    => '0666',
+  #     content => "world\n",
+  # }
   
   package { 'firefox': provider => 'brewcask' }
   package { 'slack': provider => 'brewcask' }
@@ -20,5 +20,6 @@ class techops {
   package { 'vagrant': provider => 'brewcask' }
 
   #making error
-  #package { 'virtualbox': provider => 'brewcask' }
+  package { 'virtualbox': provider => 'brewcask' }
+
 }
