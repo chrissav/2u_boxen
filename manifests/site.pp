@@ -91,5 +91,5 @@ node default {
   }
 
   #include sudoers
-  include techops
+  include people::csavadel
 }

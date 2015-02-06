@@ -1,6 +1,6 @@
 class techops {
-  
-  include spf13vim3
+
+  include python
   
   # file { '/tmp/hello2':
   #     #owner   => 'root',
