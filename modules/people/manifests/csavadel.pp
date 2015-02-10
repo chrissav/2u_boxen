@@ -11,9 +11,9 @@ class people::csavadel {
   # file { $my:
   #   ensure  => directory
   # }
-
   # repository { $dotfiles:
   #   source  => 'csavadel/dotfiles',
   #   require => File[$my]
   # }
+  
 }

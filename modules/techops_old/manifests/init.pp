@@ -1,6 +1,6 @@
 class techops {
 
-  include python
+  #include python
   
   # file { '/tmp/hello2':
   #     #owner   => 'root',
@@ -9,10 +9,10 @@ class techops {
   #     content => "world\n",
   # }
   
-  package { 'firefox': 
-    provider => 'brewcask',
-    install_options => ['--appdir=/Applications'],
-  }
+  # package { 'firefox': 
+  #   provider => 'brewcask',
+  #   install_options => ['--appdir=/Applications'],
+  # }
   # package { 'slack': provider => 'brewcask' }
   # package { 'google-chrome': provider => 'brewcask' }
   # package { 'iterm2': provider => 'brewcask' }
