@@ -61,4 +61,9 @@ github "brewcask",    "0.0.5"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
-github "python",    "2.0.0"
+github "python",       "2.0.0"
+github "perl",         "1.1.0",  :repo => "boxelly/puppet-perl"
+github "pcre",         "1.0.0"
+github "swig",         "1.0.0"
+github "graphviz",     "1.0.0"
+github "vagrant",      "3.2.2"

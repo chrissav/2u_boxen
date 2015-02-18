@@ -1,19 +1,41 @@
 class projects::techops {
   include python
+  include graphviz
+
+  homebrew::tap { 'caskroom/versions': }
 
   $brewcasks = ['firefox', 'slack', 'google-chrome', 'iterm2',
-                'dropbox', 'jing', 'skype',]
-  package { $brewcasks: 
-    provider => 'brewcask',
+                'dropbox', 'jing', 'skype', 'mysqlworkbench',]
+  package { $brewcasks:
+    provider        => 'brewcask',
     install_options => ['--appdir=/Applications'],
   }
 
-  $caskroomversions = ['sublime-text3']
-  homebrew::tap { 'caskroom/versions': }
-  package { $caskroomversions: 
-    provider => 'brewcask',
+  $caskroomversions = ['sublime-text3',]
+  package { $caskroomversions:
+    provider        => 'brewcask',
     install_options => ['--appdir=/Applications'],
   }
+
+  $homebrews = ['mysql', 'tmux']
+  package { $homebrews:
+      ensure => present,
+  }
+
+  class { 'vagrant': }
+
+  # perl::version { '5.16.2': }
+
+  # $version = '5.16.2'
+  # perl::cpanm { "Curses for ${version}":
+  #   module => 'Curses',
+  #   perl   => $version
+  # }
+
+  # perl::cpanm { "DBI for ${version}":
+  #   module => 'DBI',
+  #   perl   => $version
+  # }
 
   # boxen::project { 'trollin':
   #   dotenv        => true,
