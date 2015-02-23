@@ -1,3 +1,4 @@
+#Techops project
 class projects::techops {
   include python
   include graphviz
@@ -5,7 +6,8 @@ class projects::techops {
   homebrew::tap { 'caskroom/versions': }
 
   $brewcasks = ['firefox', 'slack', 'google-chrome', 'iterm2',
-                'dropbox', 'jing', 'skype', 'mysqlworkbench',]
+                'dropbox', 'jing', 'skype', 'mysqlworkbench',
+                'gimp']
   package { $brewcasks:
     provider        => 'brewcask',
     install_options => ['--appdir=/Applications'],
